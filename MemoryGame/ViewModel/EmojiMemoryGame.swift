@@ -9,8 +9,8 @@ import Foundation
 import SwiftUI
 
 
-class EmojiMemoryGame {
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+class EmojiMemoryGame: ObservableObject {  //ObservableObject only works for classes!
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame() //@Published is a property wrapper, change in the model is broadcast objectWillChange.send()
     
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis: Array<String> = ["👻", "🎃", "🕷"]
@@ -18,6 +18,7 @@ class EmojiMemoryGame {
             return emojis[pairIndex]
         }
     }
+    
     
     // MARK: - Access to the model
     var cards: Array<MemoryGame<String>.Card>{
