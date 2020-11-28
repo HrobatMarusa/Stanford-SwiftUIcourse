@@ -70,6 +70,7 @@
 				A2D07AAA2567FFB300739327 /* MemoryGameApp.swift */,
 				A2236A0F2572CF1D00484B88 /* GridLayout.swift */,
 				A2236A0C2572CD6400484B88 /* Array+Identifiable.swift */,
+				A2236A142572DBA600484B88 /* Array+Only.swift */,
 				A2D07AAE2567FFB400739327 /* Assets.xcassets */,
 				A2D07AB32567FFB400739327 /* Info.plist */,
 				A2D07AB02567FFB400739327 /* Preview Content */,
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				A2D07ABD2568001C00739327 /* MemoryGame.swift */,
-				A2236A142572DBA600484B88 /* Array+Only.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
