@@ -10,9 +10,9 @@
 import Foundation
 
 struct MemoryGame<CardContent> where CardContent: Equatable { //when card content can be equatable (==)
-    var cards: Array<Card>
+    private(set) var cards: Array<Card> //only the memory game model can set/change attributes of this var (but anyone can read)
     
-    var indexOfTheOneFaceUpCard: Int? { //computed value, optionals get initialized to nil (not set)
+    private var indexOfTheOneFaceUpCard: Int? { //computed value, optionals get initialized to nil (not set)
         get { cards.indices.filter { cards[$0].isFaceUp }.only }
         
         set {
