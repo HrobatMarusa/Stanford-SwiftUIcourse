@@ -30,6 +30,8 @@ class EmojiMemoryGame: ObservableObject {  //ObservableObject only works for cla
         model.choose(card: card)
     }
     
-    
+    func resetGame(){
+        model = EmojiMemoryGame.createMemoryGame()
+    }
 }
 
